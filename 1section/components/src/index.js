@@ -7,6 +7,11 @@ import faker from 'faker';
 const App = () => {
     return (
         <div className="ui container comments">
+
+            <ApprovalCard>
+                <h4>Warning!</h4>
+                <div>Are you sure....?</div>
+            </ApprovalCard>
             <ApprovalCard>
                 <CommentDetail author="Manoj" timeAgo = "Today 12 PM" comment="Nice blog post!" image={faker.image.avatar()}/>
             </ApprovalCard>
