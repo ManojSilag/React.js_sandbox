@@ -3,21 +3,30 @@ import ReactDOM from 'react-dom';
 import SeasonsDisplay from './SeasonsDisplay';
 
 
-const App = () => {
+// const App = () => {
+//     window.navigator.geolocation.getCurrentPosition( 
+//         (Position) => console.log(Position),
+//         (err) => {console.log(err)}
+//     )
+//     return (
+//         <div>HI there!!!!
+//         <SeasonsDisplay/>
+//         </div>
+        
+//     )
+// };
 
-    window.navigator.geolocation.getCurrentPosition( 
+class App extends React.Component{
+    render(){
+        window.navigator.geolocation.getCurrentPosition( 
         (Position) => console.log(Position),
         (err) => {console.log(err)}
-    )
-
-
-    return (
-        <div>HI there!!!!
-        <SeasonsDisplay/>
-        </div>
-        
-    )
-};
+        )
+        return (
+        <div>Latitude: </div>
+        )
+    }
+}
 
 ReactDOM.render(
     <App/>,
