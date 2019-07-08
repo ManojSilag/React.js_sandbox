@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux';
+import PostReducer from './PostReducer'
 
 export default combineReducers({
-    dummy: () => 10,    
+    PostReducer: PostReducer,
 });
