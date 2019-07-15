@@ -4,7 +4,7 @@ import {fetchPosts} from '../actions';
 
 class PostList extends React.Component{
     componentDidMount(){
-        this.props.fetchPosts()
+        this.props.fetchPosts() 
     }
     render(){
         return (
@@ -13,4 +13,4 @@ class PostList extends React.Component{
     }
 }
 
-export default connect(null, {fetchPosts:fetchPosts })(PostList);
+export default connect(null, {fetchPosts :fetchPosts })(PostList);
