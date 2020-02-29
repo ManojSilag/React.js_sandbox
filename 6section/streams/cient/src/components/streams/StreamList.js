@@ -1,7 +1,44 @@
-import React from 'react';
+import React from "react";
+import { connect } from "react-redux";
+import { fetchStreams } from "../../action";
+import stream from "../../apis/stream";
+import uuid from 'uuid/v1';
 
-const StreamList = () => {
-    return (<div>StreamList</div>  );
+class StreamList extends React.Component {
+  componentDidMount() {
+    this.props.fetchStreams();
+  }
+
+renderList(){
+    return this.props.streams.map(stream => {
+        return(
+            <div className="item" key={uuid()}>
+                <i className="large middle aligned icon camera"/>
+                <div className="content">
+                    {stream.title}
+                </div>
+                <div className="description">
+                    {stream.description}
+                </div>
+            </div>
+        )
+    })
 }
- 
-export default StreamList;
+
+  render() {
+    return (
+    <div>
+        <h2>Streams</h2>
+        <div className="ui celled list">
+            {this.renderList()}
+        </div>
+    </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return { streams: Object.values(state.streams) };
+};
+
+export default connect(mapStateToProps, { fetchStreams })(StreamList);
