@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div className='ui container'>
         <LanguageStore>
-          <LaguageSelector/>
+          <LaguageSelector />
           <ColorContext.Provider value='violet'>
             <UserCreate />
           </ColorContext.Provider>
