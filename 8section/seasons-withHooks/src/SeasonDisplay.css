@@ -17,7 +17,6 @@
     color: blue;
 }
 
-
 .season-display{
     display: flex;
     justify-content: center;
@@ -25,10 +24,6 @@
     height: 100vh;
 }
 
-.Summer{
-    background-color: rgb(231, 144, 112)
-}
+.Summer{ background-color: rgb(231, 144, 112) }
 
-.Winter{
-    background-color: aliceblue;
-}
+.Winter{ background-color: aliceblue; }
